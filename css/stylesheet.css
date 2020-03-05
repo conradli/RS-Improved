@@ -1,0 +1,33 @@
+body {
+    font-size: 18px;
+    
+}
+
+
+.navbar-brand {
+    width: 200px;
+    
+}
+
+.nav li {
+    margin: auto;
+    padding: 0px 10px 0px 10px;
+}
+
+.container-table {
+    align-self: auto;
+    width: 70%;
+    margin: auto;
+}
+
+
+.table {
+    text-align: center;
+    border-radius: 5px;
+    float: none;
+}
+
+.table th {
+    text-align: center;
+}
+
