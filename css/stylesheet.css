@@ -3,7 +3,6 @@ body {
     
 }
 
-
 .navbar-brand {
     width: 200px;
     
@@ -21,6 +20,10 @@ body {
 }
 
 
+
+/*-------------------------------
+Table Column class selectors 
+-------------------------------*/
 .table {
     text-align: center;
     border-radius: 5px;
@@ -31,3 +34,33 @@ body {
     text-align: center;
 }
 
+.table tbody tr:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.thDate {
+    width: 20%;
+}
+
+.thFrom {
+    width: 20%;
+}
+
+.thDestination {
+    width: 20%;
+}
+
+.thDriver {
+    width: 20%;
+}
+
+.thPrice {
+    width: 10%;
+}
+
+.thSeats {
+    width: 10%;
+}
+/*-------------------------------
+-------------------------------*/
