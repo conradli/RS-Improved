@@ -1,0 +1,35 @@
+
+
+#rideshare-logo {
+    font-size: 10vw;
+
+}
+
+#rideshare-tagline {
+    font-size: 3vw;
+    opacity: 50%;
+}
+
+.btn.btn-lg.btn-block {
+    margin: 0em;
+    width: 25vw;
+    border: 3px solid #E3E9ED;
+    text-align: start center;
+    font-weight: bold;
+    font-size: 3vw;
+    transition-duration: 0.4s;
+
+}
+
+.btn.btn-lg.btn-block:hover {
+    cursor: pointer;
+    background-color: #E3E9ED;
+}
+
+.btn-caption {
+    color:#A4ABAE;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-style: italic;
+
+}
