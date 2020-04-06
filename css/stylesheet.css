@@ -66,10 +66,14 @@ Table Column class selectors
 -------------------------------*/
 .btn.float-right {
     border: 3px solid #E3E9ED;
-    width: 150;
+    width: 100px;
 }
 
 .btn.float-right:hover {
     cursor: pointer;
     background-color: #E3E9ED;
+}
+
+.text-center .btn {
+    border: 3px solid #E3E9ED;
 }
