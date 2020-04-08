@@ -20,34 +20,14 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/makeRequest.css">
 
   <title>RideShare</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">RideShare Logo</a>
-
-
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Page 2</a>
-        </li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a>
-      </ul>
-    </div>
-  </nav>
+  <!-- Nav bar -->
+  <div id="nav-placeholder"></div>
+  <!-- End nav bar -->
 
   <br>
   <div class="container-table">
@@ -91,7 +71,7 @@
       </tbody>
     </table>
 
-    <a role="button" href="allrequests.html" class="btn float-right">See All</a>
+    <a role="button" href="allRequestsPWM.html" class="btn float-right">See All</a>
     <br><br>
 
     <h2 class="text-center">Don't See a Request to PWM?</h2>
@@ -156,7 +136,7 @@
         </tr>
       </tbody>
     </table>
-    <a role="button" href="allrequests.html" class="btn float-right">See All</a>
+    <a role="button" href="allRequestsAnywhere.html" class="btn float-right">See All</a>
     <br><br>
     <h2 class="text-center">Don't See a Request?</h2>
     <div class="text-center">
@@ -166,8 +146,8 @@
     <br>
   </div>
 
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-
+  <!-- Scripts -->
+  <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -178,9 +158,11 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
-  <script src="js/main.js"></script>
-  <script src="js/jQuery.js"></script>
+  <!-- jQuery --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+  <script src="js/main.js"></script>
+  <!-- end jQuery -->
 
 </body>
 

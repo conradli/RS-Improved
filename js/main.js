@@ -24,3 +24,8 @@ window.onclick = function(event) {
   }
 }
 
+$(document).ready(function(){
+   
+   $('#nav-placeholder').load("navbar.html");
+
+});
