@@ -1,3 +1,4 @@
+
 // Get the modal
 var PWMrequestForm = document.getElementById("PWMRequestForm");
 
@@ -24,8 +25,20 @@ window.onclick = function(event) {
   }
 }
 
-$(document).ready(function(){
-   
-   $('#nav-placeholder').load("navbar.html");
 
+$(document).ready(function () {
+  $('#nav-placeholder').load("navbar.html", function (response, status) {
+      if (status === 'error') {
+        alert("Failed to load navbar.html");
+      } 
+    });
+});
+
+    
+$(document).ready(function () {
+  $('#PWM-request-form').load("requestFormPWM.html", function (response, status) {
+      if (status === 'error') {
+        alert("Failed to load navbar.html");
+      } 
+    });
 });
