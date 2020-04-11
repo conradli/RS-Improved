@@ -79,38 +79,11 @@
 
     <h2 class="text-center">Don't See a Request to PWM?</h2>
     <div class="text-center">
-      <div id="PWM-request-form"></div>
-      <!--
-      <button class="btn" id="btnMakePWMRequest">Make a PWM REQUEST</button>
-      <div class="modal" id="PWMRequestForm">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-            <form>
-              <div class="form-group">
-                <label for="Name">Name</label>
-                <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <label for="Date">Date</label>
-                <input type="date" class="form-control" id="Date" placeholder="Date of trip">
-              </div>
-              <div class="form-group">
-                <label for="destination">Destination</label>
-                <input type="destination" class="form-control" id="destination" placeholder="Destination">
-              </div>
-              <div class="form-group">
-                <label for="seats">Number of Passengers</label>
-                <input type="seats" class="form-control" id="seats" placeholder="Seats">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    -->
-
-
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary main" data-toggle="modal" data-target="#requestForm">
+        Make a Request to PWM
+      </button>
+      <div id="request-form"></div>
     </div>
 
   </div>
@@ -165,18 +138,13 @@
 
     <h2 class="text-center">Don't See a Request?</h2>
     <div class="text-center">
-      <!-- <a role="button" class="btn" id=GeneralRequestForm>Make a General REQUEST</a> -->
-      <button class="btn" id="btnMakePWMRequest">Make a General REQUEST</button>
-      <div class="modal" id="PWMRequestForm">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-
-          </div>
-        </div>
-      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary main" data-toggle="modal" data-target="#requestForm">
+        Make a General Request
+      </button>
+      <div id="request-form"></div>
     </div>
+
 
     <br>
   </div>
