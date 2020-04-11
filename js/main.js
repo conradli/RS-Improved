@@ -39,9 +39,17 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  $('#PWM-request-form').load("requestFormPWM.html", function (response, status) {
+  $('#request-form').load("requestForm.html", function (response, status) {
     if (status === 'error') {
-      alert("Failed to load requestFormPWM.html");
+      alert("Failed to load requestForm.html");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $('#offer-form').load("offerForm.html", function (response, status) {
+    if (status === 'error') {
+      alert("Failed to load offerForm.html");
     }
   });
 });
