@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="author" content="Nelson Andrade, Conrad Li, Matthew Williams">
+  <!-- Favicon-->
+  <!------------>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+
+
+  <link rel="stylesheet" href="css/form.css">
+
+  <title>RideShare</title>
+</head>
+
+<body>
+
+  <!-- Make a Request-->
+  <div class="modal fade" id="offerForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <!-- Header to Modal -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="offerForm">Make an Offer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Modal end -->
+
+        <!-- Modal body -->
+        <!-- Form body -->
+        <div class="modal-body">
+          <div class="container-fluid">
+
+
+            <form action="" method="GET">
+              <div class="row form-group">
+                <label class="col-form-label col-md-2">Name:</label>
+                <input type="text" class="form-control col-md-10" required>
+              </div>
+
+              <div class="row form-group">
+                <label class="col-form-label col-md-2">From:</label>
+                <label class="col-md-2 radio-option">Bowdoin
+                  <input type="radio" name="from" required>
+                </label>
+                <label class="col-md-2 radio-option">PWM
+                  <input type="radio" name="from">
+                </label>
+                <label class="col-md-2 radio-option">Other:
+                </label>
+                <input type="text" name="from" class="form-control col">
+              </div>
+
+              <div class="row form-group">
+                <label class="col-form-label col-md-2">To:</label>
+                <label class="col-md-2 radio-option">Bowdoin
+                  <input type="radio" name="destination" required>
+                </label>
+                <label class="col-md-2 radio-option">PWM
+                  <input type="radio" name="destination">
+                </label>
+                <label class="col-md-2 radio-option">Other:
+                </label>
+                <input type="text" name="destination" class="form-control col">
+              </div>
+
+              <div class="row form-group">
+                <label for="datepicker" class="col-form-label col-md-1">Date:</label>
+                <input type="text" class="form-control col-sm-4" id="datepicker" placeholder="Select a Date" readonly required>
+
+                <label class="col-form-label col-md-1">Time:</label>
+                <input type="time" class="form-control col-sm-2" required>
+
+                <label class="col-form-label col-md-1">Seats:</label>
+                <select class="form-control col-sm-1 selector" id="numOfPassengers" value="1" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+
+                <label class="col-form-label col-md-1">Price:</label>
+                <input type="text" class="form-control col-sm-1">
+              </div>
+
+              <div class="row form-group">
+                <label for="email" class="col-form-label col-md-2">Email:</label>
+                <input type="email" class="form-control col-sm-4" required>
+                <label for="phoneNumber" class="col-form-label col-md-2">Phone #:</label>
+                <input type="tel" class="form-control col-sm-4">
+              </div>
+
+              <div class="row form-group">
+                <label for="additionalInfo" class="col-form-label col-md-12">Additional information:</label>
+                <textarea class="form-control col additionalInfo" maxlength="500" Placeholder="Optional"></textarea>
+              </div>
+
+            
+            </form>
+
+
+
+
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Scripts go below here-->
+  <!-- jQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  <!-- JS popper -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <!-- JS Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- Datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+
+
+  <!-- DO NOT INCLUDE JS/MAIN.JS -->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#datepicker').datepicker({
+        format: 'mm-dd-yyyy'
+      });
+    });
+  </script>
+
+  <!-- Scripts stop here -->
+</body>
+
+</html>
