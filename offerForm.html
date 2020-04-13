@@ -44,42 +44,42 @@
             <form action="" method="GET">
               <div class="row form-group">
                 <label class="col-form-label col-md-2">Name:</label>
-                <input type="text" class="form-control col-md-10" required>
+                <input id="nameText" type="text" class="form-control col-md-10" required>
               </div>
-
+    
               <div class="row form-group">
                 <label class="col-form-label col-md-2">From:</label>
-                <label class="col-md-2 radio-option">Bowdoin
-                  <input type="radio" name="from" required>
+                <label class="col-md-2 radio-option" id="fromA">Bowdoin
+                <input type="radio" id="fromBowdoin" name="from" required>
                 </label>
-                <label class="col-md-2 radio-option">PWM
-                  <input type="radio" name="from">
+                <label class="col-md-2 radio-option" id="fromB">PWM
+                <input type="radio" id="fromPWM" name="from" required>
                 </label>
                 <label class="col-md-2 radio-option">Other:
                 </label>
-                <input type="text" name="from" class="form-control col">
+                <input id="fromOther" type="text" class="form-control col" required>
               </div>
-
+    
               <div class="row form-group">
                 <label class="col-form-label col-md-2">To:</label>
-                <label class="col-md-2 radio-option">Bowdoin
-                  <input type="radio" name="destination" required>
+                <label class="col-md-2 radio-option" id="toA">Bowdoin
+                <input id="toBowdoin" type="radio" name="destination" required>
                 </label>
-                <label class="col-md-2 radio-option">PWM
-                  <input type="radio" name="destination">
+                <label class="col-md-2 radio-option" id="toB">PWM
+                <input type="radio" name="destination" id="toPWM">
                 </label>
                 <label class="col-md-2 radio-option">Other:
                 </label>
-                <input type="text" name="destination" class="form-control col">
+                <input type="text" name="destination" class="form-control col" id="toOther">
               </div>
-
+    
               <div class="row form-group">
                 <label for="datepicker" class="col-form-label col-md-1">Date:</label>
                 <input type="text" class="form-control col-sm-4" id="datepicker" placeholder="Select a Date" readonly required>
-
+    
                 <label class="col-form-label col-md-1">Time:</label>
-                <input type="time" class="form-control col-sm-2" required>
-
+                <input type="time" class="form-control col-sm-2" id="time" required>
+    
                 <label class="col-form-label col-md-1">Seats:</label>
                 <select class="form-control col-sm-1 selector" id="numOfPassengers" value="1" required>
                   <option value="1">1</option>
@@ -87,45 +87,48 @@
                   <option value="3">3</option>
                   <option value="4">4+</option>
                 </select>
-
+    
                 <label class="col-form-label col-md-1">Price:</label>
-                <input type="text" class="form-control col-sm-1">
+                <input type="text" class="form-control col-sm-1" id="price">
               </div>
-
+    
               <div class="row form-group">
                 <label for="email" class="col-form-label col-md-2">Email:</label>
-                <input type="email" class="form-control col-sm-4" required>
+                <input type="email" class="form-control col-sm-4" id="email" required>
                 <label for="phoneNumber" class="col-form-label col-md-2">Phone #:</label>
-                <input type="tel" class="form-control col-sm-4">
+                <input type="tel" class="form-control col-sm-4" id="phone">
               </div>
-
+              
               <div class="row form-group">
                 <label for="additionalInfo" class="col-form-label col-md-12">Additional information:</label>
-                <textarea class="form-control col additionalInfo" maxlength="500" Placeholder="Optional"></textarea>
+                <textarea class="form-control col additionalInfo" maxlength="500" Placeholder="Optional" id="addInfo"></textarea>
               </div>
-
-            
+    
+                
             </form>
-
-
-
-
-
+    
           </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" onclick="submitClick()" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
+      
+    
+    
   <!-- Scripts go below here-->
+    
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    
   <!-- jQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
