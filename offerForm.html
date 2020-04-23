@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <meta name="author" content="Nelson Andrade, Conrad Li, Matthew Williams">
+  <meta name="author" content="Nelson Andrade & Conrad Li">
   <!-- Favicon-->
   <!------------>
 
@@ -41,7 +41,7 @@
           <div class="container-fluid">
 
 
-            <form action="" method="GET">
+            <form action="" method="GET" id="myForm">
               <div class="row form-group">
                 <label class="col-form-label col-md-2">Name:</label>
                 <input id="nameText" type="text" class="form-control col-md-10" required>
@@ -49,33 +49,33 @@
     
               <div class="row form-group">
                 <label class="col-form-label col-md-2">From:</label>
-                <label class="col-md-2 radio-option" id="fromA">Bowdoin
+                <label class="col-md-2 radio-option">Bowdoin
                 <input type="radio" id="fromBowdoin" name="from" required>
                 </label>
-                <label class="col-md-2 radio-option" id="fromB">PWM
+                <label class="col-md-2 radio-option pwm">PWM
                 <input type="radio" id="fromPWM" name="from" required>
                 </label>
-                <label class="col-md-2 radio-option">Other:
+                <label class="col-md-2 radio-option other">Other:
                 </label>
                 <input id="fromOther" type="text" class="form-control col" required>
               </div>
     
               <div class="row form-group">
                 <label class="col-form-label col-md-2">To:</label>
-                <label class="col-md-2 radio-option" id="toA">Bowdoin
+                <label class="col-md-2 radio-option">Bowdoin
                 <input id="toBowdoin" type="radio" name="destination" required>
                 </label>
-                <label class="col-md-2 radio-option" id="toB">PWM
+                <label class="col-md-2 radio-option pwm">PWM
                 <input type="radio" name="destination" id="toPWM">
                 </label>
-                <label class="col-md-2 radio-option">Other:
+                <label class="col-md-2 radio-option other">Other:
                 </label>
                 <input type="text" name="destination" class="form-control col" id="toOther">
               </div>
     
               <div class="row form-group">
-                <label for="datepicker" class="col-form-label col-md-1">Date:</label>
-                <input type="text" class="form-control col-sm-4" id="datepicker" placeholder="Select a Date" readonly required>
+                <label for="datepicker" class="col-form-label col-md-2">Date:</label>
+                <input type="text" class="form-control col-sm-3" id="datepicker" placeholder="Select a Date" readonly required>
     
                 <label class="col-form-label col-md-1">Time:</label>
                 <input type="time" class="form-control col-sm-2" id="time" required>
@@ -112,7 +112,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" onclick="submitClick()" class="btn btn-primary">Submit</button>
+          <button type="submit" onclick="submitClick()" class="btn btn-primary" data-dismiss="modal">Submit</button>
         </div>
       </div>
     </div>
@@ -121,14 +121,7 @@
     
     
   <!-- Scripts go below here-->
-    
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-    
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
-    
+
   <!-- jQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

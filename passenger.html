@@ -44,6 +44,7 @@
           <th scope="col" class="thDriver">Driver Name</th>
           <th scope="col" class="thPrice">Price</th>
           <th scope="col" class="thSeats"># of Seats</th>
+          <th scope="col" class="thMoreInfo">More Info</th>
         </tr>
       </thead>
       <tbody>
@@ -54,7 +55,7 @@
           <td>James Interaction</td>
           <td>$5</td>
           <td>2</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
         </tr>
         <tr>
           <th scope="row">March 6, 2019</th>
@@ -63,7 +64,7 @@
           <td>Peter Drives</td>
           <td>$5</td>
           <td>1</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
         </tr>
         <tr>
           <th scope="row">March 6, 2019</th>
@@ -72,8 +73,10 @@
           <td>Francesca Winters</td>
           <td>Free</td>
           <td>2</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
+
         </tr>
+        
       </tbody>
     </table>
 
@@ -84,7 +87,7 @@
     <div class="text-center">
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary main" data-toggle="modal" data-target="#requestForm">
-        Make a Request to PWM
+        Request to PWM
       </button>
       <div id="request-form"></div>
     </div>
@@ -104,6 +107,8 @@
           <th scope="col" class="thDriver">Driver Name</th>
           <th scope="col" class="thPrice">Price</th>
           <th scope="col" class="thSeats"># of Seats</th>
+          <th scope="col" class="thMoreInfo">More Info</th>
+
         </tr>
       </thead>
       <tbody>
@@ -114,7 +119,7 @@
           <td>Conrad Li</td>
           <td>$10</td>
           <td>3</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
         </tr>
         <tr>
           <th scope="row">March 6, 2019</th>
@@ -123,7 +128,7 @@
           <td>Nelson Andrade</td>
           <td>$5</td>
           <td>3</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
         </tr>
         <tr>
           <th scope="row">March 22, 2019</th>
@@ -132,7 +137,7 @@
           <td>Sarah Harmon</td>
           <td>$30</td>
           <td>2</td>
-          <td><button onclick="window.location.href = 'popup page goes here';">More info</button></td>
+          <td><button type="button" class="btn btn-secondary" onclick="window.location.href = 'popup page goes here';">Details</button></td>
         </tr>
       </tbody>
     </table>
@@ -143,7 +148,7 @@
     <div class="text-center">
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary main" data-toggle="modal" data-target="#requestForm">
-        Make a General Request
+        General Request
       </button>
       <div id="request-form"></div>
     </div>
@@ -173,7 +178,7 @@
 
   <!-- Datepicker -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
   
   <script src="js/main.js"></script>

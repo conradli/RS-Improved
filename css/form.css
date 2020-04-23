@@ -22,8 +22,27 @@
 .col-md-2.radio-option, .col-md-2.selector {
     margin-top: 8px;
     margin-right:0;
+    padding-left: 0;
+    padding-right: 0px;
+    text-align: left;
+    flex: 0 0 13%;
+    width: 13%;
+    max-width: 13%;
+
+}
+
+.col-md-2.radio-option.pwm, .col-md-2.radio-option.other {
+    flex: 0 0 10%;
+    width: 10%;
+    max-width: 10%;
 }
 
 .form-control.additionalInfo {
     margin-left: 13px;
+}
+
+.form-control.col-sm-3 {
+    flex: 0 0 20%;
+    width: 20%;
+    max-width: 20%;
 }
