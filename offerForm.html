@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <meta name="author" content="Nelson Andrade & Conrad Li">
+  <meta name="author" content="Nelson Andrade and Conrad Li">
   <!-- Favicon-->
   <!------------>
 
@@ -22,104 +22,105 @@
 <body>
 
   <!-- Make a Request-->
-  <div class="modal fade" id="offerForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
-    aria-hidden="true">
+  <div class="modal fade" id="offerForm" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <!-- Header to Modal -->
         <div class="modal-header">
-          <h5 class="modal-title" id="offerForm">Make an Offer</h5>
+          <h5 class="modal-title">Make an Offer</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <!-- Modal end -->
 
+
         <!-- Modal body -->
         <!-- Form body -->
         <div class="modal-body">
           <div class="container-fluid">
 
-
-            <form action="" method="GET" id="myForm">
-              <div class="row form-group">
+            <form action="" method="POST">
+              <div class="row form-group required">
                 <label class="col-form-label col-md-2">Name:</label>
-                <input id="nameText" type="text" class="form-control col-md-10" required>
+                <input id="nameText" type="text" class="form-control col-md-10">
               </div>
-    
-              <div class="row form-group">
+
+              <div class="row form-group required">
                 <label class="col-form-label col-md-2">From:</label>
                 <label class="col-md-2 radio-option">Bowdoin
-                <input type="radio" id="fromBowdoin" name="from" required>
+                  <input type="radio" id="fromBowdoin" name="from" onclick="removeFromInput()">
                 </label>
                 <label class="col-md-2 radio-option pwm">PWM
-                <input type="radio" id="fromPWM" name="from" required>
+                  <input type="radio" id="fromPWM" name="from" onclick="removeFromInput()">
                 </label>
                 <label class="col-md-2 radio-option other">Other:
                 </label>
-                <input id="fromOther" type="text" class="form-control col" required>
+                <input type="text" id="fromOther" name="from" class="form-control col" onclick="removeFromRadio()">
               </div>
-    
-              <div class="row form-group">
+
+              <div class="row form-group required">
                 <label class="col-form-label col-md-2">To:</label>
                 <label class="col-md-2 radio-option">Bowdoin
-                <input id="toBowdoin" type="radio" name="destination" required>
+                  <input type="radio" name="destination" id="toBowdoin" onclick="removeToInput()">
                 </label>
                 <label class="col-md-2 radio-option pwm">PWM
-                <input type="radio" name="destination" id="toPWM">
+                  <input type="radio" name="destination" id="toPWM" onclick="removeToInput()">
                 </label>
                 <label class="col-md-2 radio-option other">Other:
                 </label>
-                <input type="text" name="destination" class="form-control col" id="toOther">
+                <input type="text" id="toOther" name="destination" class="form-control col" onclick="removeToRadio()">
               </div>
-    
-              <div class="row form-group">
+
+              <div class="row form-group required">
                 <label for="datepicker" class="col-form-label col-md-2">Date:</label>
-                <input type="text" class="form-control col-sm-3" id="datepicker" placeholder="Select a Date" readonly required>
-    
+                <input type="text" class="form-control col-md-3" name="datepicker" id="datepicker" placeholder="Select a Date" readonly>
+
                 <label class="col-form-label col-md-1">Time:</label>
-                <input type="time" class="form-control col-sm-2" id="time" required>
-    
-                <label class="col-form-label col-md-1">Seats:</label>
-                <select class="form-control col-sm-1 selector" id="numOfPassengers" value="1" required>
+                <input type="time" class="form-control col-md-2" id="time">
+
+                <label class="col-form-label col-md-1" style="margin-right:5px;">Seats:</label>
+                <select class="form-control col-sm-1 selector" id="numOfPassengers" value="0">
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4+</option>
                 </select>
-    
+
                 <label class="col-form-label col-md-1">Price:</label>
-                <input type="text" class="form-control col-sm-1" id="price">
+                <input type="text" class="form-control col-md" id="price">
               </div>
-    
+
               <div class="row form-group">
-                <label for="email" class="col-form-label col-md-2">Email:</label>
-                <input type="email" class="form-control col-sm-4" id="email" required>
+                <label for="email" class="col-form-label col-md-2 " id="emailLabel">Email:</label>
+                <input type="email" class="form-control col-sm-4" id="email">
                 <label for="phoneNumber" class="col-form-label col-md-2">Phone #:</label>
-                <input type="tel" class="form-control col-sm-4" id="phone">
+                <input type="tel" class="form-control col-sm-4" id="phone" placeholder="optional">
               </div>
-              
+
               <div class="row form-group">
                 <label for="additionalInfo" class="col-form-label col-md-12">Additional information:</label>
-                <textarea class="form-control col additionalInfo" maxlength="500" Placeholder="Optional" id="addInfo"></textarea>
+                <textarea class="form-control col additionalInfo" maxlength="500" Placeholder="Optional"
+                  id="addInfo"></textarea>
               </div>
-    
-                
+
+
             </form>
-    
+
           </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" onclick="submitClick()" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          <button id="submitOffer" type="submit" onclick="submitOffer()" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
   </div>
-      
-    
-    
+
+
+
   <!-- Scripts go below here-->
 
   <!-- jQuery-->
@@ -137,16 +138,25 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
+  <script src="js/driverSideDatabase.js"></script>
 
   <!-- DO NOT INCLUDE JS/MAIN.JS -->
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#datepicker').datepicker({
-        format: 'mm-dd-yyyy'
+  <script>
+    $(function () {
+      $("#datepicker").datepicker({
+        minDate: 0,
+        yearRange: 'c:c+5', 
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "mm/dd/yy"
       });
+
     });
   </script>
+
+
+
+
 
   <!-- Scripts stop here -->
 </body>

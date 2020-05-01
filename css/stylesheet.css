@@ -1,17 +1,34 @@
 body {
     font-size: 18px;
-    
+
 }
 
 .navbar-brand {
-    width: 200px;
-    
+    height: 50px;
+    width: 180px;
+    padding: 0;
+    background-color: #e0e0e0;
 }
 
-.nav-item {
-    margin: auto;
-    padding: 0px 10px 0px 10px;
+
+nav .navbar-nav li a{
+    color: white !important;
+    font-size: large;
 }
+
+nav .navbar-nav li:hover {
+    cursor: pointer;
+    background-color: #e0e0e0 !important;
+    font-size: large;
+}
+
+nav .navbar-nav li a:hover {
+    cursor: pointer;
+    color: black !important;
+}
+
+
+
 
 .container-table {
     align-self: auto;
@@ -20,7 +37,7 @@ body {
     border: 1px solid inherit;
 }
 
-.navbar {
+.navbar.navbar-expand-lg {
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -35,12 +52,13 @@ Table Column class selectors
     float: none;
 }
 
-.table th, .table td{
+.table th,
+.table td {
     text-align: center;
     border: none;
 }
 
-.table tbody:hover tr:hover{
+.table tbody:hover tr:hover {
     cursor: pointer;
     background-color: aliceblue;
 }
@@ -72,27 +90,24 @@ Table Column class selectors
 .thMoreInfo {
     width: 8%;
 }
+
 /*-------------------------------
 -------------------------------*/
 
 .btn.float-right {
-    border: 3px solid #E3E9ED;
+    border: #E3E9ED;
+    background-color: #E3E9ED;
     width: 100px;
 }
 
 .btn.float-right:hover {
     cursor: pointer;
-    background-color: #E3E9ED;
-}
-
-.btn {
+    background-color: #ffffff;
     border: 3px solid #E3E9ED;
+    width: 100px;
+
 }
 
-.btn:hover {
-    cursor: pointer;
-    background-color: #E3E9ED;
-}
 
 .btn.btn-primary.main {
     width: 200px;

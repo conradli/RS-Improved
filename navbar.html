@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <!--
-        <meta name="description" content="RideShare">
-        -->
+
   <meta name="author" content="Nelson Andrade, Conrad Li, Matthew Williams">
   <!-- Favicon-->
-
+  <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon">
   <!------------>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -22,26 +20,31 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">RideShare Logo</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
+    <a href="index.html"><img class="navbar-brand" src="ridesharelogo.png"></a>
 
 
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="btn nav-item" id="passenger">
+          <a class="btn nav-link" href="passenger.html">Passenger</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        
+        <li class="btn nav-item" id="driver">
+          <a class="btn nav-link" href="driver.html">Driver</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav navbar-right mt-2 mt-lg-0">
+        <li class="btn nav-item">
+          <a href="#" class="nav-link">Login</a>
         </li>
 
-
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a>
-      </ul>
+      
     </div>
-  </nav>
+  </nav>      
+
 
 
 </body>

@@ -13,9 +13,15 @@
   <!-- Favicon-->
 
   <!------------>
+
+  <!-- Bootstrap CSS link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+  <!-- Datepicker CSS link -->
+  <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+
+  <!-- Own stylesheet link -->
   <link rel="stylesheet" href="css/stylesheet.css">
 
   <title>RideShare</title>
@@ -41,54 +47,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">March 5, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>James Interaction</td>
-          <td>$5</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <th scope="row">March 6, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>Peter Drives</td>
-          <td>$5</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <th scope="row">March 6, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>Francesca Winters</td>
-          <td>Free</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <th scope="row">March 9, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>John Wick</td>
-          <td>$25</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <th scope="row">March 12, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>Michael Scott</td>
-          <td>$15</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <th scope="row">March 19, 2019</th>
-          <td>Bowdoin</td>
-          <td>PWM</td>
-          <td>Joe Exotic</td>
-          <td>$10</td>
-          <td>5</td>
-        </tr>
+
       </tbody>
     </table>
 
@@ -96,21 +55,15 @@
 
     <h2 class="text-center">Offer a ride to PWM</h2>
     <div class="text-center">
-      <button class="btn" id="btnMakePWMRequest">Offer ride to PWM</button>
-      <div class="modal" id="PWMRequestForm">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-            <!--
-                    Form content goes here
-                  -->
-          </div>
-        </div>
-      </div>
-
-
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary main" data-toggle="modal" data-target="#offerForm">
+        Make an Offer to PWM
+      </button>
+      <div id="offer-form"></div>
     </div>
+
+
+  </div>
 
   </div>
 
@@ -129,7 +82,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-    
+
+  <!-- Datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
 
@@ -139,7 +96,7 @@
 
 
   <script src="js/main.js"></script>
-
+  <script src="js/driverSideDatabase.js"></script>
   <!-- Scripts stop here -->
 
 </body>
